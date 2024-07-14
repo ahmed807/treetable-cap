@@ -1,0 +1,9 @@
+nodeID;hierarchyLevel;parentNodeID;drillState;objectName;createdBy;createdOn
+1;0;null;"expanded";"Car";"Ahmed";"19.05.2024"
+2;0;null;"expanded";"Motorcycle";"Ahmed";"19.05.2024"
+3;0;null;"expanded";"Airplane";"Ahmed";"19.05.2024"
+4;1;1;"leaf";"Wheel";"Ahmed";"19.05.2024"
+8;1;2;"leaf";"Wheel";"Mo";"19.05.2024"
+5;1;1;"expanded";"Engine";"Ahmed";"19.05.2024"
+6;2;5;"leaf";"Fuel System";"Ahmed";"19.05.2024"
+7;2;5;"leaf";"Ignition System";"Ahmed";"19.05.2024"
