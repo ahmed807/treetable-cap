@@ -1,1 +1,1 @@
-using from './hierarchy/annotations';
+using from './hierarchy/fiori-service';

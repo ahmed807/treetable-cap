@@ -100,11 +100,19 @@
                     }
                 },
                 "pages": {
-                    "ObjectPage|NodeDetails": {
-                        "navigationProperty": "details",
-                        "entitySet": "NodeDetails",
+                    "MyObjectPageOnFirstLevel": {
+                        "entitySet": "Node",
                         "component": {
                             "name": "sap.suite.ui.generic.template.ObjectPage"
+                        },
+                        "pages": {
+                            "MyFirstObjectPageOnSecondLevel": {
+                                "navigationProperty": "details",
+                                "entitySet": "NodeDetails",
+                                "component": {
+                                    "name": "sap.suite.ui.generic.template.ObjectPage"
+                                }
+                            }
                         }
                     }
                 }

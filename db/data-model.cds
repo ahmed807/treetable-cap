@@ -18,3 +18,4 @@ entity NodeDetails {
   objectName: String;
   objectContent: String;
 }
+

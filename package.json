@@ -8,6 +8,7 @@
   "dependencies": {
     "@cap-js-community/odata-v2-adapter": "^1.12.12",
     "@sap/cds": "^7",
+    "@sap/ux-cds-odata-language-server-extension": "^1.14.1",
     "express": "^4"
   },
   "devDependencies": {
