@@ -1,9 +1,194 @@
 nodeID;objectName;objectContent
-1;"Car";"A vehicle with four wheels, typically powered by an internal combustion engine."
-2;"Motorcycle";"A two-wheeled vehicle that is powered by a motor and has no pedals."
-3;"Airplane";"A powered flying vehicle with fixed wings and a weight greater than that of the air it displaces."
-4;"Wheel";"A circular component that is intended to rotate on an axle bearing."
-5;"Engine";"A machine designed to convert one form of energy into mechanical energy."
-6;"Fuel System";"A system that stores and supplies fuel to the engine."
-7;"Ignition System";"A system for igniting the fuel-air mixture in an internal combustion engine."
-8;"Wheel";"A circular component that is intended to rotate on an axle bearing."
+1;"Car";"CLASS zcl_car DEFINITION.
+  PUBLIC SECTION.
+    DATA: make TYPE string,
+          model TYPE string,
+          year TYPE i.
+    METHODS: constructor IMPORTING make TYPE string model TYPE string year TYPE i,
+             display.
+ENDCLASS.
+
+CLASS zcl_car IMPLEMENTATION.
+  METHOD constructor.
+    me->make = make.
+    me->model = model.
+    me->year = year.
+  ENDMETHOD.
+
+  METHOD display.
+    WRITE: / 'Make:', me->make,
+           / 'Model:', me->model,
+           / 'Year:', me->year.
+  ENDMETHOD.
+ENDCLASS.
+
+DATA: car TYPE REF TO zcl_car.
+CREATE OBJECT car EXPORTING make = 'Toyota' model = 'Corolla' year = 2020.
+car->display( )."
+2;"Motorcycle";"CLASS zcl_motorcycle DEFINITION.
+  PUBLIC SECTION.
+    DATA: make TYPE string,
+          model TYPE string,
+          cc TYPE i.
+    METHODS: constructor IMPORTING make TYPE string model TYPE string cc TYPE i,
+             display.
+ENDCLASS.
+
+CLASS zcl_motorcycle IMPLEMENTATION.
+  METHOD constructor.
+    me->make = make.
+    me->model = model.
+    me->cc = cc.
+  ENDMETHOD.
+
+  METHOD display.
+    WRITE: / 'Make:', me->make,
+           / 'Model:', me->model,
+           / 'CC:', me->cc.
+  ENDMETHOD.
+ENDCLASS.
+
+DATA: motorcycle TYPE REF TO zcl_motorcycle.
+CREATE OBJECT motorcycle EXPORTING make = 'Honda' model = 'CBR' cc = 600.
+motorcycle->display( )."
+3;"Airplane";"CLASS zcl_airplane DEFINITION.
+  PUBLIC SECTION.
+    DATA: make TYPE string,
+          model TYPE string,
+          capacity TYPE i.
+    METHODS: constructor IMPORTING make TYPE string model TYPE string capacity TYPE i,
+             display.
+ENDCLASS.
+
+CLASS zcl_airplane IMPLEMENTATION.
+  METHOD constructor.
+    me->make = make.
+    me->model = model.
+    me->capacity = capacity.
+  ENDMETHOD.
+
+  METHOD display.
+    WRITE: / 'Make:', me->make,
+           / 'Model:', me->model,
+           / 'Capacity:', me->capacity.
+  ENDMETHOD.
+ENDCLASS.
+
+DATA: airplane TYPE REF TO zcl_airplane.
+CREATE OBJECT airplane EXPORTING make = 'Boeing' model = '747' capacity = 416.
+airplane->display( )."
+4;"Wheel";"CLASS zcl_wheel DEFINITION.
+  PUBLIC SECTION.
+    DATA: diameter TYPE i,
+          material TYPE string.
+    METHODS: constructor IMPORTING diameter TYPE i material TYPE string,
+             display.
+ENDCLASS.
+
+CLASS zcl_wheel IMPLEMENTATION.
+  METHOD constructor.
+    me->diameter = diameter.
+    me->material = material.
+  ENDMETHOD.
+
+  METHOD display.
+    WRITE: / 'Diameter:', me->diameter,
+           / 'Material:', me->material.
+  ENDMETHOD.
+ENDCLASS.
+
+DATA: wheel TYPE REF TO zcl_wheel.
+CREATE OBJECT wheel EXPORTING diameter = 18 material = 'Alloy'.
+wheel->display( )."
+5;"Engine";"CLASS zcl_engine DEFINITION.
+  PUBLIC SECTION.
+    DATA: horsepower TYPE i,
+          type TYPE string.
+    METHODS: constructor IMPORTING horsepower TYPE i type TYPE string,
+             display.
+ENDCLASS.
+
+CLASS zcl_engine IMPLEMENTATION.
+  METHOD constructor.
+    me->horsepower = horsepower.
+    me->type = type.
+  ENDMETHOD.
+
+  METHOD display.
+    WRITE: / 'Horsepower:', me->horsepower,
+           / 'Type:', me->type.
+  ENDMETHOD.
+ENDCLASS.
+
+DATA: engine TYPE REF TO zcl_engine.
+CREATE OBJECT engine EXPORTING horsepower = 300 type = 'V8'.
+engine->display( )."
+6;"Fuel System";"CLASS zcl_fuel_system DEFINITION.
+  PUBLIC SECTION.
+    DATA: capacity TYPE i,
+          type TYPE string.
+    METHODS: constructor IMPORTING capacity TYPE i type TYPE string,
+             display.
+ENDCLASS.
+
+CLASS zcl_fuel_system IMPLEMENTATION.
+  METHOD constructor.
+    me->capacity = capacity.
+    me->type = type.
+  ENDMETHOD.
+
+  METHOD display.
+    WRITE: / 'Capacity:', me->capacity,
+           / 'Type:', me->type.
+  ENDMETHOD.
+ENDCLASS.
+
+DATA: fuel_system TYPE REF TO zcl_fuel_system.
+CREATE OBJECT fuel_system EXPORTING capacity = 60 type = 'Petrol'.
+fuel_system->display( )."
+7;"Ignition System";"CLASS zcl_ignition_system DEFINITION.
+  PUBLIC SECTION.
+    DATA: voltage TYPE i,
+          type TYPE string.
+    METHODS: constructor IMPORTING voltage TYPE i type TYPE string,
+             display.
+ENDCLASS.
+
+CLASS zcl_ignition_system IMPLEMENTATION.
+  METHOD constructor.
+    me->voltage = voltage.
+    me->type = type.
+  ENDMETHOD.
+
+  METHOD display.
+    WRITE: / 'Voltage:', me->voltage,
+           / 'Type:', me->type.
+  ENDMETHOD.
+ENDCLASS.
+
+DATA: ignition_system TYPE REF TO zcl_ignition_system.
+CREATE OBJECT ignition_system EXPORTING voltage = 12 type = 'Electronic'.
+ignition_system->display( )."
+8;"Wheel";"CLASS zcl_wheel DEFINITION.
+  PUBLIC SECTION.
+    DATA: diameter TYPE i,
+          material TYPE string.
+    METHODS: constructor IMPORTING diameter TYPE i material TYPE string,
+             display.
+ENDCLASS.
+
+CLASS zcl_wheel IMPLEMENTATION.
+  METHOD constructor.
+    me->diameter = diameter.
+    me->material = material.
+  ENDMETHOD.
+
+  METHOD display.
+    WRITE: / 'Diameter:', me->diameter,
+           / 'Material:', me->material.
+  ENDMETHOD.
+ENDCLASS.
+
+DATA: wheel TYPE REF TO zcl_wheel.
+CREATE OBJECT wheel EXPORTING diameter = 18 material = 'Alloy'.
+wheel->display( )."

@@ -43,8 +43,7 @@ annotate HierarchyService.Node with @(UI: {
     $Type         : 'UI.HeaderInfoType',
     TypeName      : 'Node',
     TypeNamePlural: 'Nodes',
-    Title         : {Value: objectName},
-    Description   : {Value: details.objectContent}
+    Title         : {Value: objectName}
   },
   Facets                : [{
     $Type : 'UI.ReferenceFacet',
@@ -74,10 +73,13 @@ annotate HierarchyService.Node with @(UI: {
         Value: details.objectContent
       }
     ]
-  }
+  },
+
 }
 
+
 );
+
 
 annotate HierarchyService.NodeDetails with @(UI: {
   Identification: [
@@ -109,31 +111,3 @@ annotate HierarchyService.NodeDetails with @(UI: {
     Description   : {Value: objectContent}
   }
 });
-
-// "pages": {
-//     "ListReport|Node": {
-//         "entitySet": "Node",
-//         "component": {
-//             "name": "sap.suite.ui.generic.template.ListReport",
-//             "list": true,
-//             "settings": {
-//                 "condensedTableLayout": true,
-//                 "smartVariantManagement": true,
-//                 "tableType": "TreeTable",
-//                 "enableTableFilterInPageVariant": true,
-//                 "dataLoadSettings": {
-//                     "loadDataOnAppLaunch": "always"
-//                 }
-//             }
-//         },
-//         "pages": {
-//             "ObjectPage|NodeDetails": {
-//                 "navigationProperty": "details",
-//                 "entitySet": "NodeDetails",
-//                 "component": {
-//                     "name": "sap.suite.ui.generic.template.ObjectPage"
-//                 }
-//             }
-//         }
-//     }
-// }
