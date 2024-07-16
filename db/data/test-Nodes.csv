@@ -1,0 +1,9 @@
+Nodes,ID,title,group
+1,1,"Car","Vehicles"
+2,2,"Motorcycle","Vehicles"
+3,3,"Airplane","Aircraft"
+4,4,"Wheel","Components"
+5,5,"Engine","Components"
+6,6,"Fuel System","Components"
+7,7,"Ignition System","Components"
+8,8,"Wheel","Components"
